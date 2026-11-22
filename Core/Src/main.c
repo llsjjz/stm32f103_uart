@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "func_uart.h"
+#include "func_uart_0.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

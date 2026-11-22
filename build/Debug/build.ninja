@@ -416,18 +416,6 @@ build cmake/stm32cubemx/rebuild_cache: phony cmake/stm32cubemx/CMakeFiles/rebuil
 
 build cmake_object_order_depends_target_func_uart: phony || .
 
-build func/CMakeFiles/func_uart.dir/uart/func_uart.c.obj: C_COMPILER__func_uart_unscanned_Debug /home/llsjjz/STM32CubeMX/project/stm32f103zet6_uart/func/uart/func_uart.c || cmake_object_order_depends_target_func_uart
-  CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = func/CMakeFiles/func_uart.dir/uart/func_uart.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m3  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/llsjjz/STM32CubeMX/project/stm32f103zet6_uart/func/uart -I/home/llsjjz/STM32CubeMX/project/stm32f103zet6_uart/cmake/stm32cubemx/../../Core/Inc -I/home/llsjjz/STM32CubeMX/project/stm32f103zet6_uart/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc -I/home/llsjjz/STM32CubeMX/project/stm32f103zet6_uart/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/llsjjz/STM32CubeMX/project/stm32f103zet6_uart/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/llsjjz/STM32CubeMX/project/stm32f103zet6_uart/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = func/CMakeFiles/func_uart.dir
-  OBJECT_FILE_DIR = func/CMakeFiles/func_uart.dir/uart
-  TARGET_COMPILE_PDB = func/CMakeFiles/func_uart.dir/func_uart.pdb
-  TARGET_PDB = func/libfunc_uart.pdb
-  TARGET_SUPPORT_DIR = func/CMakeFiles/func_uart.dir
-
 build func/CMakeFiles/func_uart.dir/uart/circle_buffer.c.obj: C_COMPILER__func_uart_unscanned_Debug /home/llsjjz/STM32CubeMX/project/stm32f103zet6_uart/func/uart/circle_buffer.c || cmake_object_order_depends_target_func_uart
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
@@ -460,7 +448,7 @@ build func/CMakeFiles/func_uart.dir/uart/func_uart_0.c.obj: C_COMPILER__func_uar
 #############################################
 # Link the static library func/libfunc_uart.a
 
-build func/libfunc_uart.a: C_STATIC_LIBRARY_LINKER__func_uart_Debug func/CMakeFiles/func_uart.dir/uart/func_uart.c.obj func/CMakeFiles/func_uart.dir/uart/circle_buffer.c.obj func/CMakeFiles/func_uart.dir/uart/func_uart_0.c.obj
+build func/libfunc_uart.a: C_STATIC_LIBRARY_LINKER__func_uart_Debug func/CMakeFiles/func_uart.dir/uart/circle_buffer.c.obj func/CMakeFiles/func_uart.dir/uart/func_uart_0.c.obj
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -mcpu=cortex-m3  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m3  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   OBJECT_DIR = func/CMakeFiles/func_uart.dir
