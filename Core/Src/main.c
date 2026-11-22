@@ -25,6 +25,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "func_uart_0.h"
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,13 +93,25 @@ int main(void)
   MX_DMA_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  uint8_t rxbuffer[255];
+  uint8_t txbuffer[255];
+  func_uart_base_t uart1;
+  Func_Uart_Init(&uart1,rxbuffer,255,txbuffer,255,&huart1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    char txt[255]={0};
+    uint16_t leng = 0;
+    if(Func_Uart_Receive(&uart1,(uint8_t*)txt,20,&leng))
+    {
+      Func_Uart_Transmit(&uart1,(uint8_t*)txt,strlen(txt));
+    }
+
+    HAL_Delay(100);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
